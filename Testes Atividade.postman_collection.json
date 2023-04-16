@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "53e9c711-c85d-413d-9ae6-ce603a1b9221",
+		"name": "Testes Atividade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26796617"
+	},
+	"item": [
+		{
+			"name": "Lista alunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Julia\",\r\n    \"register\": 145\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Julia\",\r\n    \"average\": 10\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/update/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"update",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
