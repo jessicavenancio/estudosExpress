@@ -7,13 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "Lista alunos",
+			"name": "Insere alunos",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Julia\",\r\n    \"register\": 145\r\n}",
+					"raw": "{\r\n    \"name\": \"Luiz Carlos\",\r\n    \"register\": 354,\r\n    \"average\" : 10\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/students/delete/1",
+					"raw": "http://localhost:3000/students/delete/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -50,7 +50,7 @@
 					"path": [
 						"students",
 						"delete",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -63,10 +63,15 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Julia\",\r\n    \"average\": 10\r\n}"
+					"raw": "{\r\n    \"index\": 3,\r\n    \"name\": \"Claudia\",\r\n    \"average\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/students/update/0",
+					"raw": "http://localhost:3000/students/update/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -75,7 +80,26 @@
 					"path": [
 						"students",
 						"update",
-						"0"
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
 					]
 				}
 			},
